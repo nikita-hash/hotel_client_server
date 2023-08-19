@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.textfield.CustomPasswordField?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" styleClass="gradient_background" stylesheets="@../static/style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.HeaderMenu">
+   <children>
+      <AnchorPane fx:id="dark_bg" prefHeight="600.0" prefWidth="600.0" styleClass="dark_bg" visible="false" />
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0" styleClass="header_title_back">
+         <children>
+            <Label alignment="CENTER" prefHeight="36.0" prefWidth="541.0" text="       Добро пожаловать " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="close" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="REMOVE" size="35" />
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Закрыть приложение">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="100.0" prefHeight="60.0" prefWidth="600.0">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" styleClass="header_title_back_open" text="Авторизация" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="tool_reg" alignment="CENTER" mnemonicParsing="false" styleClass="header_title_tool" text="Регистрация" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="tool_reviews" alignment="CENTER" mnemonicParsing="false" styleClass="header_title_tool" text="Отзывы" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <AnchorPane layoutY="160.0" prefHeight="440.0" prefWidth="600.0">
+         <children>
+            <VBox layoutX="50.0" layoutY="20.0" prefHeight="400.0" prefWidth="500.0" styleClass="header_title_back_aut">
+               <children>
+                  <Label text="Логин" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="login" promptText="Введите логин">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Пароль" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <CustomPasswordField fx:id="password" promptText="Введите пароль" />
+                  <HBox alignment="CENTER" prefHeight="141.0" prefWidth="400.0">
+                     <children>
+                        <Button fx:id="bt_enter" mnemonicParsing="false" prefHeight="33.0" prefWidth="150.0" styleClass="bt_custom" text="Войти">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" styleClass="button_link" text="Забыли пароль ?">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0">
+                     <children>
+                        <Label fx:id="label_er" alignment="CENTER" prefHeight="56.0" prefWidth="400.0" styleClass="error_label" text="Аккаунт с таким логином уже существует" textAlignment="CENTER" visible="false">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="50.0" right="50.0" top="50.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
