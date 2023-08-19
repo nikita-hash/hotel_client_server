@@ -1,0 +1,1318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import io.github.gleidson28.GNAvatarView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.ToggleSwitch?>
+
+<AnchorPane fx:id="header_background" maxHeight="765.0" maxWidth="1200.0" prefHeight="765.0" prefWidth="1187.0" styleClass="gradient_background" stylesheets="@../static/style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.AdminMenu">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="13.0" prefHeight="738.0" prefWidth="150.0" styleClass="nav-bar_close">
+         <children>
+            <HBox alignment="CENTER_LEFT" minHeight="150.0" prefHeight="100.0" prefWidth="200.0" styleClass="tool_img">
+               <children>
+                  <GNAvatarView fx:id="pers_photo_avatar" minHeight="80.0" minWidth="80.0" prefHeight="80.0" prefWidth="80.0" type="CIRCLE">
+                     <image>
+                        <Image url="@../static/style/image/avatar.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </GNAvatarView>
+                  <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="183.0">
+                     <children>
+                        <Label fx:id="header_label_fio" alignment="CENTER" prefHeight="87.0" prefWidth="176.0" text="Радин Никита Сергеевич" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="53.0" prefWidth="176.0" text="Администратор" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <VBox prefHeight="63.0" prefWidth="280.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="280.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="TELEGRAM" size="25" wrappingWidth="30.0" />
+                        <Label graphicTextGap="20.0" prefHeight="36.0" prefWidth="176.0" text="inst_weqs" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="280.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="INSTAGRAM" size="25" wrappingWidth="30.0" />
+                        <Label prefHeight="36.0" prefWidth="176.0" text="tg_hotel" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="tool_block" alignment="CENTER_LEFT" prefHeight="470.0" prefWidth="280.0">
+               <children>
+                  <HBox fx:id="tool_client" alignment="CENTER_LEFT" maxWidth="280.0" prefHeight="50.0" prefWidth="280.0" styleClass="tool_open">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="30" textAlignment="CENTER" wrappingWidth="29.0">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label prefHeight="52.0" prefWidth="212.0" text="Клиенты" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox fx:id="tool_history" alignment="CENTER_LEFT" maxWidth="280.0" prefHeight="50.0" prefWidth="280.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ADDRESS_BOOK" size="30" textAlignment="CENTER" wrappingWidth="29.0">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label prefHeight="52.0" prefWidth="212.0" text="Книга бронирования" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="tool_statistick" alignment="CENTER_LEFT" maxWidth="280.0" prefHeight="50.0" prefWidth="280.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" size="30" textAlignment="CENTER" wrappingWidth="29.0">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label prefHeight="52.0" prefWidth="212.0" text="Статистика" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="tool_room" alignment="CENTER_LEFT" maxWidth="280.0" prefHeight="50.0" prefWidth="280.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="30" textAlignment="CENTER" wrappingWidth="29.0">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label prefHeight="52.0" prefWidth="212.0" text="Номера отеля" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="tool_employee" alignment="CENTER_LEFT" maxWidth="280.0" prefHeight="50.0" prefWidth="280.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="VCARD" size="30" textAlignment="CENTER" wrappingWidth="29.0">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label prefHeight="52.0" prefWidth="212.0" text="Персонал" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="tool_settins" alignment="CENTER_LEFT" maxWidth="280.0" prefHeight="50.0" prefWidth="280.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="COGS" size="30" textAlignment="CENTER" wrappingWidth="29.0">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label prefHeight="52.0" prefWidth="212.0" text="Настройки" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_LEFT" layoutX="321.0" layoutY="13.0" prefHeight="50.0" prefWidth="870.0">
+         <children>
+            <Line endX="505.5857849121094" endY="0.7279678583145142" startX="-100.0" stroke="#fe8498" strokeWidth="2.0">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Line>
+            <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PRINT" size="30">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Распечатать отчет">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Tooltip>
+               </tooltip>
+            </Button>
+            <Button fx:id="tool_comment" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="COMMENT" size="30">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Отзывы">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Button fx:id="tool_add_admin" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="30">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Добавить администратора">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Button fx:id="tool_exit" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="30">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Выход">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <HBox.margin>
+                  <Insets left="35.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <AnchorPane fx:id="block_room" layoutX="321.0" layoutY="63.0" prefHeight="688.0" prefWidth="870.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="870.0">
+               <children>
+                  <Line endX="114.58578491210938" endY="1.5497207641601562E-6" startX="-100.0" stroke="#fe8498" strokeWidth="2.0">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Line>
+                  <Label prefHeight="50.0" prefWidth="140.0" text="Комнаты" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="30" textAlignment="CENTER" wrappingWidth="29.0">
+                     <HBox.margin>
+                        <Insets right="100.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Button fx:id="tool_add_room" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="30">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontAwesomeIconView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Добавить комнату" />
+                     </tooltip>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="60.0" prefHeight="626.0" prefWidth="850.0">
+               <content>
+                  <VBox fx:id="list_room" prefWidth="850.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="block_statistic" layoutX="321.0" layoutY="63.0" prefHeight="688.0" prefWidth="870.0" visible="false">
+         <children>
+            <VBox layoutX="-6.0" layoutY="-14.0" prefHeight="716.0" prefWidth="870.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="30.0" />
+               </padding>
+               <children>
+                  <HBox prefHeight="170.0" prefWidth="850.0" styleClass="container">
+                     <children>
+                        <VBox minWidth="282.0" prefHeight="150.0" prefWidth="282.0" styleClass="statistic_block">
+                           <children>
+                              <Label graphicTextGap="20.0" prefHeight="42.0" prefWidth="268.0" styleClass="label_header" text="Кол-во номеров отеля">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="30" />
+                                 </graphic>
+                              </Label>
+                              <Label fx:id="stat_room" alignment="CENTER" prefHeight="104.0" prefWidth="288.0" text="123123123" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="150.0" prefWidth="309.0" styleClass="statistic_block">
+                           <children>
+                              <Label graphicTextGap="20.0" prefHeight="42.0" prefWidth="258.0" styleClass="label_header" text="Аккаунтов в системе">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="30" />
+                                 </graphic>
+                              </Label>
+                              <Label fx:id="stat_acc" alignment="CENTER" prefHeight="104.0" prefWidth="288.0" text="123123123" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="150.0" prefWidth="228.0">
+                           <children>
+                              <Label graphicTextGap="20.0" prefHeight="42.0" prefWidth="258.0" styleClass="label_header" text="Черный список">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="30" />
+                                 </graphic>
+                              </Label>
+                              <Label fx:id="stat_ban" alignment="CENTER" prefHeight="104.0" prefWidth="288.0" text="123123123" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="298.0" prefWidth="850.0" styleClass="container">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <LineChart legendVisible="false" prefHeight="250.0" prefWidth="865.0" title="Годовая статистика бронирования отеля">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="165.0" prefWidth="850.0" styleClass="container">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox minWidth="282.0" prefHeight="150.0" prefWidth="282.0" styleClass="statistic_block">
+                           <children>
+                              <Label graphicTextGap="20.0" prefHeight="42.0" prefWidth="268.0" styleClass="label_header" text="Загруженность">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="SORT_AMOUNT_ASC" rotate="180.0" size="30" />
+                                 </graphic>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="87.0" prefWidth="258.0">
+                                 <children>
+                                    <HBox alignment="CENTER" minHeight="90.0" minWidth="90.0" prefHeight="90.0" prefWidth="90.0" style="-fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 1;">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets bottom="-1.0" left="-4.0" right="-4.0" top="-1.0" />
+                                       </padding>
+                                    </HBox>
+                                    <Label alignment="CENTER" prefHeight="100.0" prefWidth="130.0" text="98%" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="35.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox minWidth="282.0" prefHeight="146.0" prefWidth="523.0" styleClass="statistic_block">
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="258.0">
+                                 <children>
+                                    <Label graphicTextGap="20.0" prefHeight="42.0" prefWidth="181.0" styleClass="label_header" text="Свобные номера">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ProgressBar fx:id="progress_room" prefHeight="23.0" prefWidth="198.0" progress="0.55">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </ProgressBar>
+                                    <Label fx:id="progress_room_label" alignment="CENTER" prefHeight="70.0" prefWidth="88.0" text="100%" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="258.0">
+                                 <children>
+                                    <Label graphicTextGap="20.0" prefHeight="42.0" prefWidth="181.0" styleClass="label_header" text="Черный список">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ProgressBar prefHeight="23.0" prefWidth="198.0" progress="0.33">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </ProgressBar>
+                                    <Label alignment="CENTER" prefHeight="70.0" prefWidth="88.0" text="100%" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="block_settins" layoutX="321.0" layoutY="63.0" prefHeight="688.0" prefWidth="870.0" visible="false">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="870.0">
+               <children>
+                  <Line endX="114.58578491210938" endY="1.5497207641601562E-6" startX="-100.0" stroke="#fe8498" strokeWidth="2.0">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Line>
+                  <Label prefHeight="50.0" prefWidth="140.0" text="Настройки" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="COGS" size="30" textAlignment="CENTER" wrappingWidth="29.0" />
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox layoutY="50.0" prefHeight="652.0" prefWidth="870.0">
+               <children>
+                  <VBox prefHeight="617.0" prefWidth="550.0" styleClass="container">
+                     <children>
+                        <Accordion prefHeight="446.0" prefWidth="530.0">
+                          <panes>
+                            <TitledPane prefHeight="279.0" prefWidth="530.0" text="Аккаунт">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="271.0" prefWidth="528.0">
+                                       <children>
+                                          <VBox alignment="CENTER" minHeight="200.0" prefHeight="240.0" prefWidth="160.0">
+                                             <children>
+                                                <GNAvatarView fx:id="pers_photo" minHeight="80.0" minWidth="80.0" prefHeight="130.0" prefWidth="260.0" type="CIRCLE">
+                                                   <image>
+                                                      <Image url="@../static/style/image/avatar.png" />
+                                                   </image>
+                                                   <VBox.margin>
+                                                      <Insets bottom="20.0" />
+                                                   </VBox.margin>
+                                                </GNAvatarView>
+                                                <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="160.0" styleClass="button_link" text="Загрузить фото">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="188.0" layoutY="14.0" prefHeight="99.0" prefWidth="330.0">
+                                             <children>
+                                                <Label prefHeight="27.0" prefWidth="211.0" text="Ваш логин" textFill="WHITE" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <TextField fx:id="pers_login" prefHeight="18.0" prefWidth="249.0" promptText="pers_login" text="asdas">
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <Label alignment="CENTER" prefHeight="21.0" prefWidth="250.0" styleClass="error_label" text="Не верный формат" textAlignment="CENTER" textFill="RED" visible="false" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox layoutX="188.0" layoutY="133.0" prefHeight="99.0" prefWidth="330.0">
+                                             <children>
+                                                <Label prefHeight="27.0" prefWidth="211.0" text="Ваш пароль" textFill="WHITE" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <TextField fx:id="pers_password" prefHeight="18.0" prefWidth="249.0" text="asdas">
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <Label alignment="CENTER" prefHeight="21.0" prefWidth="250.0" styleClass="error_label" text="Не верный формат" textAlignment="CENTER" textFill="RED" visible="false" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children></AnchorPane>
+                              </content>
+                            </TitledPane>
+                              <TitledPane prefHeight="63.0" prefWidth="530.0" text="Информация о вашем аккаунте">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox prefHeight="242.0" prefWidth="530.0">
+                                             <children>
+                                                <VBox prefHeight="242.0" prefWidth="250.0">
+                                                   <children>
+                                                      <Label prefHeight="27.0" prefWidth="211.0" text="Ваше имя" textFill="WHITE" wrapText="true">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="39.0" prefWidth="197.0">
+                                                         <children>
+                                                            <FontAwesomeIconView fill="WHITE" glyphName="VK" size="30">
+                                                               <HBox.margin>
+                                                                  <Insets right="20.0" />
+                                                               </HBox.margin>
+                                                            </FontAwesomeIconView>
+                                                            <TextField fx:id="pers_vk" prefHeight="18.0" prefWidth="249.0" text="asdas" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Label alignment="CENTER" prefHeight="21.0" prefWidth="250.0" styleClass="error_label" text="Не верный формат" textAlignment="CENTER" textFill="RED" visible="false" wrapText="true">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="39.0" prefWidth="197.0">
+                                                         <children>
+                                                            <FontAwesomeIconView fill="WHITE" glyphName="TELEGRAM" size="30">
+                                                               <HBox.margin>
+                                                                  <Insets right="20.0" />
+                                                               </HBox.margin>
+                                                            </FontAwesomeIconView>
+                                                            <TextField fx:id="pers_tg" prefHeight="18.0" prefWidth="249.0" text="asdas" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Label alignment="CENTER" prefHeight="21.0" prefWidth="250.0" styleClass="error_label" text="Не верный формат" textAlignment="CENTER" textFill="RED" visible="false" wrapText="true">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="39.0" prefWidth="197.0">
+                                                         <children>
+                                                            <FontAwesomeIconView fill="WHITE" glyphName="INSTAGRAM" size="30">
+                                                               <HBox.margin>
+                                                                  <Insets right="20.0" />
+                                                               </HBox.margin>
+                                                            </FontAwesomeIconView>
+                                                            <TextField fx:id="pers_inst" prefHeight="18.0" prefWidth="249.0" text="asdas" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Label alignment="CENTER" prefHeight="21.0" prefWidth="250.0" styleClass="error_label" text="Не верный формат" textAlignment="CENTER" textFill="RED" visible="false" wrapText="true">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                                <VBox prefHeight="242.0" prefWidth="283.0">
+                                                   <children>
+                                                      <Label prefHeight="27.0" prefWidth="211.0" text="Статус аккаунта" textFill="WHITE" wrapText="true">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="39.0" prefWidth="197.0">
+                                                         <children>
+                                                            <TextField prefHeight="18.0" prefWidth="249.0" text="Аккаунт активен" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Label prefHeight="27.0" prefWidth="211.0" text="Тип Аккаунта" textFill="WHITE" wrapText="true">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="39.0" prefWidth="197.0">
+                                                         <children>
+                                                            <TextField prefHeight="18.0" prefWidth="249.0" text="Администратор" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Label prefHeight="27.0" prefWidth="211.0" text="Дата регистрации" textFill="WHITE" wrapText="true">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="39.0" prefWidth="197.0">
+                                                         <children>
+                                                            <TextField prefHeight="18.0" prefWidth="249.0" text="13.03.1992" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children></AnchorPane>
+                                </content>
+                              </TitledPane>
+                            <TitledPane expanded="false" maxHeight="-Infinity" prefHeight="286.0" prefWidth="530.0" text="Личная информация">
+                              <content>
+                                <AnchorPane layoutX="50.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="530.0">
+                                             <children>
+                                                <HBox prefHeight="70.0" prefWidth="530.0">
+                                                   <children>
+                                                      <VBox prefHeight="70.0" prefWidth="271.0">
+                                                         <children>
+                                                            <Label prefHeight="27.0" prefWidth="211.0" text="Ваше имя" textFill="WHITE" wrapText="true">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="pers_name" prefHeight="18.0" prefWidth="249.0" text="asdas">
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label alignment="CENTER" prefHeight="21.0" prefWidth="250.0" styleClass="error_label" text="Не верный формат" textAlignment="CENTER" textFill="RED" visible="false" wrapText="true">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" right="10.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox prefHeight="70.0" prefWidth="271.0">
+                                                         <children>
+                                                            <Label prefHeight="27.0" prefWidth="211.0" text="Ваша фамилия" textFill="WHITE" wrapText="true">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="pers_lastName" prefHeight="18.0" prefWidth="249.0" text="asdasd">
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label alignment="CENTER" prefHeight="21.0" prefWidth="248.0" styleClass="error_label" text="Не верный формат " textFill="RED" visible="false" wrapText="true">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" right="10.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <padding>
+                                                      <Insets top="10.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox prefHeight="96.0" prefWidth="530.0">
+                                                   <children>
+                                                      <VBox prefHeight="70.0" prefWidth="271.0">
+                                                         <children>
+                                                            <Label prefHeight="27.0" prefWidth="211.0" text="Ваше отчество" textFill="WHITE" wrapText="true">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="persPatronymic" prefHeight="18.0" prefWidth="249.0" text="asdasd">
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label alignment="CENTER" prefHeight="21.0" prefWidth="243.0" styleClass="error_label" text="Не верный формат " textFill="RED" visible="false" wrapText="true">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" right="10.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                      <VBox prefHeight="70.0" prefWidth="271.0">
+                                                         <children>
+                                                            <Label prefHeight="27.0" prefWidth="211.0" text="Ваш номер телефона" textFill="WHITE" wrapText="true">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="pers_phone" prefHeight="18.0" prefWidth="249.0" text="asdasd">
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label alignment="CENTER" prefHeight="21.0" prefWidth="244.0" styleClass="error_label" text="Не верный формат " textFill="RED" visible="false" wrapText="true">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" right="10.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children></AnchorPane>
+                              </content>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                            </TitledPane>
+                            <TitledPane text="Паспортные данные">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="530.0">
+                                             <children>
+                                                <HBox prefHeight="70.0" prefWidth="530.0">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <padding>
+                                                      <Insets top="10.0" />
+                                                   </padding>
+                                                   <children>
+                                                      <VBox prefHeight="99.0" prefWidth="529.0">
+                                                         <children>
+                                                            <Label prefHeight="27.0" prefWidth="211.0" text="ID паспорта" textFill="WHITE" wrapText="true">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="pers_id_passport" prefHeight="18.0" prefWidth="249.0" text="asdasd">
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label alignment="CENTER" prefHeight="21.0" prefWidth="510.0" styleClass="error_label" text="Не верный формат " textFill="RED" visible="false" wrapText="true">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" right="10.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="96.0" prefWidth="530.0">
+                                                   <children>
+                                                      <VBox prefHeight="99.0" prefWidth="533.0">
+                                                         <children>
+                                                            <Label prefHeight="27.0" prefWidth="211.0" text="Серия и номер" textFill="WHITE" wrapText="true">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="pers_seria" prefHeight="18.0" prefWidth="249.0" text="asdasd">
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label alignment="CENTER" prefHeight="21.0" prefWidth="517.0" styleClass="error_label" text="Не верный формат " textFill="RED" visible="false" wrapText="true">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets top="10.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" right="10.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children></AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="530.0">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" styleClass="bt_custom" text="Cохранить изменения" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="34.0" prefWidth="530.0">
+                           <children>
+                              <Label fx:id="label_sec" graphicTextGap="20.0" prefHeight="35.0" prefWidth="250.0" text="Успешно сохранено" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="LIME" glyphName="CHECK" selectionFill="LIME" size="35" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="602.0" prefWidth="280.0" styleClass="container">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" size="100" />
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="260.0" styleClass="container_list">
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="211.0" text="Подключение к базе даных" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ToggleSwitch disable="true" selected="true" style="-fx-background-color: rr;" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="260.0" styleClass="container_list">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="255.0" text="База данных : MySql Workbench" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="260.0" styleClass="container_list">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="255.0" text="Driver : mysql connector" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="208.0" styleClass="container_list">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="255.0" text="Подключения драйвера " textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <RadioButton disable="true" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" selected="true" textFill="#d05d0b" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="260.0" styleClass="container_list">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="block_black_list" layoutX="321.0" layoutY="63.0" prefHeight="688.0" prefWidth="870.0" visible="false">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="870.0">
+               <children>
+                  <Line endX="114.58578491210938" endY="1.5497207641601562E-6" startX="-100.0" stroke="#fe8498" strokeWidth="2.0">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Line>
+                  <Label prefHeight="50.0" prefWidth="243.0" text="Черный список отеля" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="LOCK" size="30" textAlignment="CENTER" wrappingWidth="29.0" />
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <TextField layoutX="22.0" layoutY="60.0" prefHeight="37.0" prefWidth="350.0" promptText="Поиск" />
+            <TableView layoutX="22.0" layoutY="117.0" prefHeight="556.0" prefWidth="830.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="ID" />
+                <TableColumn prefWidth="75.0" text="Фото" />
+                  <TableColumn prefWidth="75.0" text="ФИО" />
+                  <TableColumn prefWidth="200.0" text="Контактный номер тел" />
+                  <TableColumn prefWidth="280.0" text="Причина" />
+                  <TableColumn prefWidth="123.0" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="block_comment" layoutX="321.0" layoutY="63.0" prefHeight="688.0" prefWidth="870.0" visible="false">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="870.0">
+               <children>
+                  <Line endX="114.58578491210938" endY="1.5497207641601562E-6" startX="-100.0" stroke="#fe8498" strokeWidth="2.0">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Line>
+                  <Label prefHeight="50.0" prefWidth="243.0" text="Отзывы постояльцев" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="COMMENT" size="30" textAlignment="CENTER" wrappingWidth="29.0" />
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" layoutX="7.0" layoutY="60.0" prefHeight="626.0" prefWidth="857.0">
+               <content>
+                  <VBox fx:id="list_view" accessibleHelp="daassad">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="block_employee" layoutX="321.0" layoutY="63.0" prefHeight="688.0" prefWidth="870.0" visible="false">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="870.0">
+               <children>
+                  <Line endX="114.58578491210938" endY="1.5497207641601562E-6" startX="-100.0" stroke="#fe8498" strokeWidth="2.0">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Line>
+                  <Label prefHeight="50.0" prefWidth="122.0" text="Персонал" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="VCARD" size="30" textAlignment="CENTER" wrappingWidth="29.0">
+                     <HBox.margin>
+                        <Insets right="250.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Button fx:id="tool_add_employee" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="30">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontAwesomeIconView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Добавить сотрудника">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <TextField layoutX="14.0" layoutY="68.0" prefHeight="37.0" prefWidth="300.0" promptText="Поиск" />
+            <TableView fx:id="tb_employee" layoutX="14.0" layoutY="128.0" prefHeight="560.0" prefWidth="843.0">
+              <columns>
+                <TableColumn fx:id="tb_id_empl" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="tb_avatar_empl" prefWidth="140.0" text="Фото" />
+                  <TableColumn fx:id="tb_FIO_empl" prefWidth="200.0" text="ФИО" />
+                  <TableColumn fx:id="tb_phone_empl" prefWidth="140.0" text="Номер телефона" />
+                  <TableColumn fx:id="tb_position_empl" prefWidth="125.0" text="Должность" />
+                  <TableColumn fx:id="tb_action_empl" prefWidth="160.0" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="block_client" layoutX="321.0" layoutY="63.0" prefHeight="688.0" prefWidth="870.0" visible="false">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="870.0">
+               <children>
+                  <Line endX="114.58578491210938" endY="1.5497207641601562E-6" startX="-100.0" stroke="#fe8498" strokeWidth="2.0">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Line>
+                  <Label prefHeight="50.0" prefWidth="122.0" text="Клиенты" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="30" textAlignment="CENTER" wrappingWidth="29.0">
+                     <HBox.margin>
+                        <Insets right="250.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" layoutX="13.0" layoutY="60.0" prefHeight="634.0" prefWidth="857.0">
+               <content>
+                  <VBox fx:id="list_account" maxHeight="-Infinity" prefWidth="855.0">
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="dark_bg" prefHeight="765.0" prefWidth="1200.0" styleClass="dark_bg" visible="false" />
+   </children>
+</AnchorPane>

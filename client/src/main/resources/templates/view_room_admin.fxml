@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" styleClass="gradient_background" stylesheets="@../static/style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ViewRoomAdmin">
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="703.0" styleClass="dark_bg">
+         <children>
+            <Button fx:id="close" mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="REMOVE" size="35" />
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Закрыть приложение">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="43.0" maxHeight="400.0" maxWidth="700.0" prefHeight="400.0" prefWidth="700.0" styleClass="dark_bg">
+         <children>
+            <ImageView fx:id="image_view" fitHeight="386.0" fitWidth="663.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../static/style/image/room1.jpg" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+      <Button fx:id="bt_left" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" styleClass="swiper_arrow" textFill="GREY" visible="false">
+         <graphic>
+            <FontAwesomeIconView fill="#000000b2" glyphName="ARROW_CIRCLE_LEFT" size="100" />
+         </graphic>
+      </Button>
+      <Button fx:id="bt_right" layoutX="585.0" layoutY="200.0" mnemonicParsing="false" styleClass="swiper_arrow" textFill="GREY">
+         <graphic>
+            <FontAwesomeIconView fill="#000000b2" glyphName="ARROW_CIRCLE_RIGHT" size="100" />
+         </graphic>
+      </Button>
+      <VBox layoutY="467.0" prefHeight="162.0" prefWidth="703.0">
+         <children>
+            <HBox prefHeight="35.0" prefWidth="703.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="255.0" text="Текущий статус комнаты" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="status" editable="false" prefHeight="37.0" prefWidth="369.0">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="703.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="182.0" text="Цена за сутки" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="price" alignment="CENTER_RIGHT" editable="false" prefHeight="37.0" prefWidth="130.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="24.0" prefWidth="42.0" text="BY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="106.0" text="Тип" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="type" editable="false" prefHeight="37.0" prefWidth="165.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="107.0" prefWidth="703.0">
+               <children>
+                  <Button fx:id="bt_repair" mnemonicParsing="false" prefHeight="50.0" styleClass="bt_custom" text="Закрыть на ремонт">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bt_remove" mnemonicParsing="false" prefHeight="50.0" prefWidth="153.0" styleClass="bt_custom" text="Удалить комнату">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bt_stop" mnemonicParsing="false" prefHeight="50.0" prefWidth="212.0" styleClass="bt_custom" text="Остановить заселение">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

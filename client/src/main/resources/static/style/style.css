@@ -1,0 +1,446 @@
+.gradient_background{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%,#D91F4E,#FF8540);
+    }
+
+.nav-bar_close{
+    -fx-padding: 10;
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 10 ;
+    -fx-border-radius: 10;
+    -fx-max-width: 300px;
+    -fx-pref-width: 300px;
+}
+
+.tool_img{
+    -fx-border-width: 2px;
+    -fx-border-color: transparent transparent #fe8498 transparent;
+}
+
+.tool_open{
+    -fx-background-radius: 10;
+    -fx-background-color: #983142;
+}
+
+.tool_bar_item:hover{
+    -fx-padding: 10 10 10 40;
+}
+
+.avatar_img{
+    -fx-background-color: #D91F4E;
+}
+
+.container{
+    -fx-padding: 10;
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 10 ;
+    -fx-border-radius: 10;
+}
+
+
+.titled-pane .content{
+    -fx-border-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-background-color: #e77588;
+    -fx-background-radius: 10;
+}
+
+.titled-pane .title {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-background-color: #e77588;
+}
+
+.titled-pane{
+    -fx-background-color: transparent;
+    -fx-font-size: 20px;
+    -fx-pref-height: 500px;
+    -fx-text-fill: white;
+    -fx-padding: 0px 0px 10px 0px;
+}
+
+.titled-pane .arrow-button .arrow{
+    -fx-background-color: white;
+}
+
+.label_header{
+    -fx-text-fill: white;
+    -fx-border-color: transparent transparent #fe8498 transparent;
+}
+
+.statistic_block{
+    -fx-border-width: 2px;
+    -fx-border-color: transparent #fe8498 transparent transparent;
+}
+
+.comment_rating{
+    -fx-border-color: transparent transparent transparent white;
+}
+
+.comment_footer{
+    -fx-border-color: white transparent transparent transparent;
+}
+
+.scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+.scroll-pane{
+    -fx-background-color: transparent;
+}
+
+.table-view{
+    -fx-border-color: transparent;
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+
+.table-view .column-header {
+    -fx-font-weight: 700;
+    -fx-border-color: transparent;
+    -fx-background-color: #e4384c;
+}
+
+.bt_custom{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #fe8498, #FF8540);
+    -fx-font-weight: 700;
+    -fx-font-size: 15px;
+    -fx-border-radius: 10;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-border-color: white;
+    -fx-cursor: hand;
+}
+
+.text-field{
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent white transparent;
+}
+
+.error_label{
+    -fx-background-radius: 10;
+    -fx-text-fill: #f31c1c;
+    -fx-background-color: #ff9898;
+}
+
+.text-field{
+    -fx-font-size: 16px ;
+}
+
+.label_fio:focused{
+    -fx-font-size: 18px;
+}
+
+.swpiper_pengation{
+
+}
+
+.swiper_arrow{
+    -fx-background-color: rgba(128, 128, 128, 0.5);
+    -fx-background-radius: 50;
+    -fx-cursor: hand;
+}
+
+.swiper_arrow:hover{
+    -fx-background-color: rgba(128, 128, 128, 0.8);
+}
+
+.button_link{
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.container_list{
+    -fx-border-color: transparent transparent #de4f67 transparent;
+    -fx-border-width: 2px;
+}
+
+.custom_inp{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-padding: 5px 5px 5px 5px;
+}
+
+.img_baground{
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    -fx-background-radius: 10;
+}
+
+.avatar{
+    -fx-text-fill:rgba(255, 255, 255, 0) ;
+    -fx-stroke: rgba(255, 255, 255, 0);
+    -fx-background-color:transparent;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(255, 255, 255, 0);
+}
+
+.custom_inp .text-field{
+    -fx-prompt-text-fill: #ababab;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: black;
+}
+
+.custom_inp .label{
+    -fx-background-radius: 50px;
+    -fx-background-color: #fa4e4e;
+}
+
+.custom_inp .combo-box .list-cell {
+    -fx-prompt-text-fill: #ababab;
+    -fx-font-size: 15px;
+    -fx-text-fill: black;
+}
+
+.combo-box{
+    -fx-text-fill: #ababab;
+}
+
+.combo-box .list-view{
+    -fx-text-fill: black;
+}
+
+.custom_inp .combo-box{
+    -fx-background-color: transparent;
+}
+
+.custom_inp .arrow{
+    -fx-background-color: transparent;
+}
+
+.custom_inp .combo-box .text-input{
+    -fx-prompt-text-fill: red;
+    -fx-text-fill: red;
+}
+
+
+.custom_inp .label_rub{
+    -fx-background-color: #c9c4c4;
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+}
+
+.custom_inp .label_sec{
+    -fx-background-radius: 50px;
+    -fx-background-color: #6cd26c;
+}
+
+.label_sec{
+    -fx-background-radius: 50px;
+    -fx-background-color: #6cd26c;
+}
+
+.dark_bg{
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.chart-title{
+    -fx-text-fill: white;
+    -fx-font-weight: 800;
+}
+
+.chart-plot-background{
+    -fx-background-color: transparent;
+}
+.axis{
+    -fx-stroke: #fff;
+    -fx-fill: #fff;
+    -fx-font-size: 24;
+    -fx-tick-label-fill: #fff;
+}
+
+.default-color0.chart-pie{
+    -fx-pie-color:transparent
+}
+.default-color1.chart-pie{
+    -fx-pie-color:transparent
+}
+.default-color2.chart-pie{
+    -fx-pie-color:transparent
+}
+.default-color3.chart-pie{
+    -fx-pie-color:transparent
+}
+.default-color4.chart-pie{
+    -fx-pie-color:transparent
+}
+.chart-pie-label{
+    -fx-fill: white;
+    -fx-stroke: white;
+    -fx-font-size: 10px;
+}
+.chart-pie-label-line{
+    -fx-fill: white;
+    -fx-stroke: white;
+}
+
+.progress-bar{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent transparent transparent;
+}
+
+.progress-bar .bar{
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-background-color:  #FF8540;
+    -fx-border-color: transparent transparent transparent transparent;
+}
+
+.progress-bar .track{
+    -fx-border-radius: 10;
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}
+
+.progress-indicator .bar{
+    -fx-background-color: black;
+}
+
+.progress-indicator:indeterminate .segment{
+    -fx-background-color: black;
+}
+
+.header_title_back{
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header_title_tool{
+    -fx-cursor:hand;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: 800;
+    -fx-border-color:  transparent transparent white transparent ;
+}
+
+.header_title_tool:hover{
+    -fx-font-size: 18px;
+    -fx-cursor:hand;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: 800;
+    -fx-border-color:  transparent transparent white transparent ;
+}
+
+.header_title_back_open{
+    -fx-cursor:hand;
+    -fx-background-color: transparent;
+    -fx-font-weight: 800;
+    -fx-text-fill: yellow;
+    -fx-border-color:  transparent transparent yellow transparent ;
+}
+
+.header_title_back_open:hover{
+    -fx-font-size: 18px;
+    -fx-cursor:hand;
+    -fx-background-color: transparent;
+    -fx-font-weight: 800;
+    -fx-text-fill: yellow;
+    -fx-border-color:  transparent transparent yellow transparent ;
+}
+
+.header_title_back_aut{
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    -fx-background-radius: 10;
+}
+
+
+.spinner:focused{
+    -fx-background-color:  #9d3039;
+    -fx-border-color: transparent;
+}
+.spinner .text-field{
+    -fx-background-color:  #9d3039;
+    -fx-border-color: transparent;
+}
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: #9d3039;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+}
+.spinner .increment-arrow-button .increment-arrow,
+.spinner .decrement-arrow-button .decrement-arrow {
+    -fx-background-color: white;
+}
+
+.date-picker{
+    -fx-border-color: #9d3039;
+}
+.date-picker .arrow-button {
+    -fx-background-color: #9d3039;
+    -fx-background-radius: 0;
+}
+.date-picker .text-field{
+    -fx-background-color:  #9d3039;
+    -fx-border-color: #9d3039;
+}
+.date-picker .arrow-button{
+    -fx-border-color: transparent;
+}
+.date-picker .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+/*-----------------------------------------
+Customize popup content
+-------------------------------------------*/
+.date-picker .cell {
+    -fx-border-color: #9d3039;
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #fe8498, #FF8540);
+    -fx-text-fill: white;
+}
+
+.date-picker .cell:hover {
+    -fx-background-color:  #f45d45;
+}
+
+.date-picker .cell:focused {
+    -fx-background-color:  #f45d45;
+}
+
+/*-----------------------------------------
+Customize the selected cell
+-------------------------------------------*/
+.date-picker .selected {
+    -fx-background-color: #f45d45;
+    -fx-text-fill: white;
+}
+
+.date-picker .selected:focused {
+    -fx-background-color: #f45d45;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup {
+    -fx-border-color: #9d3039;
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #fe8498, #FF8540);
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: -fx-primary-color;
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: -fx-secondary-color;
+}
+
+/*-----------------------------------------
+Customize left and right arrow
+-------------------------------------------*/
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+    -fx-background-color: #c2d70e;
+}
